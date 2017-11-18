@@ -1,10 +1,13 @@
 {
   "name": "cat-cart",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bundle.js",
   "repository": "git@github.com:ku00/cat-cart.git",
   "author": "ku00 <skentaro36@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack config/webpack.config.js"
+  },
   "dependencies": {
     "ts-loader": "^3.1.1",
     "typescript": "^2.6.1",
