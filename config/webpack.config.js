@@ -2,22 +2,17 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  context: `${__dirname}/app`,
-  entry: './src',
+  context: path.resolve(__dirname, '../app'),
+  entry: './src/app.module',
   output: {
-    path: `${__dirname}/dist`,
-    filename: 'bundle.ts'
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'bundle.js'
   },
   resolve: {
     extensions: ['.ts', '.js']
   },
-  module: {
-    loaders: [
-      {
-        test: /\.ts$/,
-        loader: 'ts-loader'
-      }
-    ]
+  devServer: {
+    contentBase: "../dist",
   },
   devtool: 'source-map'
 }
